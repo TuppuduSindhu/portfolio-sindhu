@@ -1,13 +1,8 @@
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@/assets/profile-photo.jpg";
-
 const HeroSection = () => {
-  return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
-    >
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Decorations */}
       <div className="blob-decoration w-96 h-96 bg-primary/20 top-20 -left-48 animate-blob" />
       <div className="blob-decoration w-80 h-80 bg-secondary/20 top-40 right-0 animate-blob-delayed" />
@@ -22,10 +17,7 @@ const HeroSection = () => {
               Hello, I'm{" "}
               <span className="gradient-text">Sindhu Tuppudu</span>
             </h1>
-            <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">
-              Computer Science (AI) Student |{" "}
-              <span className="text-secondary">Frontend & Software Developer</span>
-            </h2>
+            
             <p className="text-muted-foreground text-lg max-w-xl mb-8 mx-auto lg:mx-0">
               Passionate about building innovative solutions with AI, web development, 
               and problem-solving. Final-year B.Tech student ready to make an impact.
@@ -69,11 +61,7 @@ const HeroSection = () => {
               
               {/* Image Container */}
               <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
-                <img
-                  src={profilePhoto}
-                  alt="Sindhu Tuppudu"
-                  className="w-full h-full object-cover"
-                />
+                <img src={profilePhoto} alt="Sindhu Tuppudu" className="w-full h-full object-cover" />
               </div>
 
               {/* Floating Badge */}
@@ -93,8 +81,6 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;

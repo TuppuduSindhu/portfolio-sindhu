@@ -1,10 +1,6 @@
-import { Heart } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="py-8 border-t border-border/50">
+  return <footer className="py-8 border-t border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo */}
@@ -14,10 +10,7 @@ const Footer = () => {
           </a>
 
           {/* Copyright */}
-          <p className="text-sm text-muted-foreground flex items-center gap-1">
-            © {currentYear} Sindhu Tuppudu. Made with{" "}
-            <Heart className="text-primary fill-primary" size={14} />
-          </p>
+          
 
           {/* Quick Links */}
           <div className="flex items-center gap-6">
@@ -33,8 +26,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
