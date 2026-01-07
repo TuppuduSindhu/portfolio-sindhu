@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -76,7 +76,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border/50">
+          <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
@@ -88,7 +88,7 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="flex items-center gap-4 pt-4 border-t border-border/50">
+              <div className="flex items-center gap-4 pt-4 border-t border-border">
                 <a
                   href="https://github.com/TuppuduSindhu"
                   target="_blank"

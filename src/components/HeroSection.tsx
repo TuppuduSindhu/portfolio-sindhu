@@ -1,19 +1,21 @@
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePhoto from "@/assets/profile-photo.jpg";
+
 const HeroSection = () => {
-  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Decorations */}
       <div className="blob-decoration w-96 h-96 bg-primary/20 top-20 -left-48 animate-blob" />
-      <div className="blob-decoration w-80 h-80 bg-secondary/20 top-40 right-0 animate-blob-delayed" />
-      <div className="blob-decoration w-64 h-64 bg-accent/15 bottom-20 left-1/4 animate-blob" />
+      <div className="blob-decoration w-80 h-80 bg-accent/15 top-40 right-0 animate-blob-delayed" />
+      <div className="blob-decoration w-64 h-64 bg-primary/10 bottom-20 left-1/4 animate-blob" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left animate-slide-up">
             <p className="section-heading">Welcome to my portfolio</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
               Hello, I'm{" "}
               <span className="gradient-text">Sindhu Tuppudu</span>
             </h1>
@@ -57,11 +59,15 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
               {/* Decorative Ring */}
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary via-secondary to-accent opacity-30 blur-xl animate-pulse" />
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary via-accent to-primary opacity-20 blur-xl animate-pulse" />
               
               {/* Image Container */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
-                <img src={profilePhoto} alt="Sindhu Tuppudu" className="w-full h-full object-cover" />
+              <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-3xl overflow-hidden border-4 border-primary/20 shadow-2xl">
+                <img 
+                  src={profilePhoto} 
+                  alt="Sindhu Tuppudu" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Floating Badge */}
@@ -81,6 +87,8 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;

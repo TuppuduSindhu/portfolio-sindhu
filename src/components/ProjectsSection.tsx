@@ -16,7 +16,7 @@ const projects = [
     description: "AI-based MRI tumor detection & classification using CNN, ResNet50, EfficientNet, and YOLOv8. Features Grad-CAM visualization and report generation.",
     tech: ["Python", "Streamlit", "CNN", "YOLOv8"],
     githubUrl: "https://github.com/TuppuduSindhu/BRAIN_TUMOR_DIAGNOSIS_BY_TUMOR_TRACKER_TEAM",
-    color: "secondary",
+    color: "accent",
   },
   {
     title: "Face Expression Detector",
@@ -24,7 +24,7 @@ const projects = [
     description: "Detects and analyzes facial expressions in real time using computer vision technologies.",
     tech: ["HTML", "CSS", "JavaScript", "OpenCV"],
     liveUrl: "https://tuppudusindhu.github.io/Face_Expression_detector/",
-    color: "accent",
+    color: "primary",
   },
   {
     title: "Academic Results Analysis",
@@ -32,23 +32,19 @@ const projects = [
     description: "Analyzes student performance and influencing factors using Python data analysis libraries.",
     tech: ["Python", "Pandas", "NumPy", "Matplotlib"],
     githubUrl: "https://github.com/TuppuduSindhu/Academic-Results-Analysis-Using-Python",
-    color: "primary",
+    color: "accent",
   },
 ];
 
 const getColorClasses = (color: string) => {
   const colors: Record<string, { gradient: string; border: string }> = {
     primary: { 
-      gradient: "from-primary/20 to-transparent", 
-      border: "border-primary/30 hover:border-primary" 
-    },
-    secondary: { 
-      gradient: "from-secondary/20 to-transparent", 
-      border: "border-secondary/30 hover:border-secondary" 
+      gradient: "from-primary/10 to-transparent", 
+      border: "border-primary/20 hover:border-primary/50" 
     },
     accent: { 
-      gradient: "from-accent/20 to-transparent", 
-      border: "border-accent/30 hover:border-accent" 
+      gradient: "from-accent/10 to-transparent", 
+      border: "border-accent/20 hover:border-accent/50" 
     },
   };
   return colors[color] || colors.primary;
@@ -56,14 +52,14 @@ const getColorClasses = (color: string) => {
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 relative overflow-hidden bg-card/30">
+    <section id="projects" className="py-20 relative overflow-hidden bg-muted/30">
       {/* Background Decoration */}
-      <div className="blob-decoration w-96 h-96 bg-secondary/10 -right-48 bottom-20" />
+      <div className="blob-decoration w-96 h-96 bg-accent/10 -right-48 bottom-20" />
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="section-heading">Portfolio</p>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Featured{" "}
             <span className="gradient-text">Projects</span>
           </h2>
@@ -79,7 +75,7 @@ const ProjectsSection = () => {
             return (
               <div
                 key={index}
-                className={`card-glass p-6 border-2 ${colors.border} transition-all duration-300 hover:scale-[1.02] group`}
+                className={`card-glass p-6 border-2 ${colors.border} transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group`}
               >
                 {/* Gradient Overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none`} />
@@ -87,7 +83,7 @@ const ProjectsSection = () => {
                 <div className="relative">
                   {/* Header */}
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
                     <p className="text-primary text-sm font-medium">{project.subtitle}</p>
                   </div>
                   
