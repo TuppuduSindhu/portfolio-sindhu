@@ -4,12 +4,12 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 relative overflow-hidden">
       {/* Background Decoration */}
-      <div className="blob-decoration w-72 h-72 bg-secondary/10 -right-36 top-20" />
+      <div className="blob-decoration w-72 h-72 bg-accent/10 -right-36 top-20" />
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="section-heading">About Me</p>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Designing Solutions,{" "}
             <span className="gradient-text">Not Just Visuals</span>
           </h2>
@@ -36,16 +36,16 @@ const AboutSection = () => {
                   <GraduationCap size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Education</h4>
+                  <h4 className="font-semibold text-foreground">Education</h4>
                   <p className="text-sm text-muted-foreground">B.Tech CSE (AI) - 2026</p>
                 </div>
               </div>
               <div className="card-glass p-4 flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-secondary/10 text-secondary">
+                <div className="p-2 rounded-lg bg-accent/10 text-accent">
                   <Target size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Focus Areas</h4>
+                  <h4 className="font-semibold text-foreground">Focus Areas</h4>
                   <p className="text-sm text-muted-foreground">AI, Web Dev, Data Science</p>
                 </div>
               </div>
@@ -54,7 +54,7 @@ const AboutSection = () => {
 
           {/* Right - Values */}
           <div className="card-glass p-8">
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-foreground">
               <Heart className="text-primary" size={24} />
               What Drives Me
             </h3>

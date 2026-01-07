@@ -18,25 +18,25 @@ const skillCategories = [
     title: "Web Technologies",
     icon: Globe,
     skills: ["HTML", "CSS", "React"],
-    color: "secondary",
+    color: "accent",
   },
   {
     title: "AI & Data",
     icon: Brain,
     skills: ["AI/ML", "Data Science", "DSA"],
-    color: "accent",
+    color: "primary",
   },
   {
     title: "Tools & Platforms",
     icon: Wrench,
     skills: ["VS Code", "Google Colab", "Git"],
-    color: "primary",
+    color: "accent",
   },
   {
     title: "Professional Skills",
     icon: Users,
     skills: ["Communication", "Team Leadership", "Problem Solving"],
-    color: "secondary",
+    color: "primary",
   },
   {
     title: "Design",
@@ -49,7 +49,6 @@ const skillCategories = [
 const getColorClasses = (color: string) => {
   const colors: Record<string, { bg: string; text: string; border: string }> = {
     primary: { bg: "bg-primary/10", text: "text-primary", border: "border-primary/30" },
-    secondary: { bg: "bg-secondary/10", text: "text-secondary", border: "border-secondary/30" },
     accent: { bg: "bg-accent/10", text: "text-accent", border: "border-accent/30" },
   };
   return colors[color] || colors.primary;
@@ -57,14 +56,14 @@ const getColorClasses = (color: string) => {
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 relative overflow-hidden bg-card/30">
+    <section id="skills" className="py-20 relative overflow-hidden bg-muted/30">
       {/* Background Decoration */}
       <div className="blob-decoration w-96 h-96 bg-primary/10 -left-48 top-1/2" />
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <p className="section-heading">Skills & Expertise</p>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Technologies I{" "}
             <span className="gradient-text">Work With</span>
           </h2>
@@ -81,13 +80,13 @@ const SkillsSection = () => {
             return (
               <div
                 key={index}
-                className="card-glass p-6 hover:scale-105 transition-transform duration-300"
+                className="card-glass p-6 hover:scale-105 transition-transform duration-300 hover:shadow-lg"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`p-3 rounded-xl ${colors.bg} ${colors.text}`}>
                     <Icon size={24} />
                   </div>
-                  <h3 className="font-semibold text-lg">{category.title}</h3>
+                  <h3 className="font-semibold text-lg text-foreground">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
