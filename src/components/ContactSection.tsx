@@ -21,15 +21,15 @@ const ContactSection = () => {
 
     try {
       await emailjs.send(
-        "service_lv3dgup",
-        "template_8gzqw87",
+        "service_x9nzr4b",
+        "template_etsx1l2",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
           to_name: "Sindhu",
         },
-        "XLkBZe6ccLPk2rK7m"
+        "gH-HZrUF06rSy0rYb"
       );
 
       toast({
